@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Chuyên Nghiệp</title>
+    <link rel="stylesheet" href="assets\css\style.css">
+    
+</head>
+<body>
+    <header>
+        <h1>Chào mừng đến với Website của tôi</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">Giới thiệu</a></li>
+                <li><a href="#services">Dịch vụ</a></li>
+                <li><a href="#contact">Liên hệ</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="about">
+        <h2>Về chúng tôi</h2>
+        <p>Chúng tôi cung cấp các giải pháp chuyên nghiệp về công nghệ.</p>
+    </section>
+    
+    <section id="services">
+        <h2>Dịch vụ</h2>
+        <ul>
+            <li>Thiết kế web</li>
+            <li>Phát triển ứng dụng</li>
+            <li>Tư vấn công nghệ</li>
+        </ul>
+    </section>
+    
+    <section id="contact">
+        <h2>Liên hệ</h2>
+        <p>Email: contact@example.com</p>
+        <form id="contactForm">
+            <input type="text" id="name" placeholder="Tên của bạn" required>
+            <input type="email" id="email" placeholder="Email của bạn" required>
+            <textarea id="message" placeholder="Nội dung tin nhắn" rows="4" required></textarea>
+            <button type="submit">Gửi</button>
+        </form>
+        <p id="responseMessage" style="color: green; display: none;">Cảm ơn bạn! Chúng tôi sẽ liên hệ sớm.</p>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Website Chuyên Nghiệp. Mọi quyền được bảo lưu.</p>
+    </footer>
+
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            document.getElementById("responseMessage").style.display = "block";
+            setTimeout(() => {
+                document.getElementById("responseMessage").style.display = "none";
+            }, 3000);
+            this.reset();
+        });
+    </script>
+</body>
+</html>
